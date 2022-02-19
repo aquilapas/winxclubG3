@@ -67,4 +67,4 @@ Seu objetivo inicial é analisar estes arquivos criando uma base de dados relaci
 
 ---
 ## 📌 TRELLO
-add link aqui
+https://trello.com/b/1JIIKXnd/accenture-desafio
