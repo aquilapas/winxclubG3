@@ -65,4 +65,6 @@ Seu objetivo inicial é analisar estes arquivos criando uma base de dados relaci
 6. Análise relacional do banco de dados
 7. Objetivo alcançado com os relatórios apresentados no PowerBI
 
-
+---
+## 📌 TRELLO
+add link aqui
