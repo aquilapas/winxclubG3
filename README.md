@@ -6,11 +6,17 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 ## Participantes do Grupo 3
 
 ● **Ana Carolina Oliveira**
+
 ● **Áquila Porfirio Almeida Santos**
+
 ● **Carolina Gabrielle Vieira**
+
 ● **Flávia Scarlate**
+
 ● **Karoline Costa da Silva**
+
 ● **Nathalia Madia**
+
 ● **Paula Correa**
 
 ## Orientador
