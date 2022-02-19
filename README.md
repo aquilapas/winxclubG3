@@ -34,10 +34,15 @@ Desenvolver uma aplicação em Python para carga de arquivos em um banco de dado
 ---
 ## 💡 DICAS DE HACKER
 Pronto! Você recebeu um arquivo zip com vários arquivos mostrando possíveis movimentações bancárias:
+
 ● transaction-in-001.csv, transaction-in-002.csv …
+
 ● transaction-out-001.csv, transaction-out-002.csv …
+
 ● clients-001.csv, clients-002.csv …
+
 ● Link Download: https://drive.google.com/file/d/1nXHnNt9dj03GB42SErcrNvZOzHwOyAcx/view?usp=sharing
+
 
 Seu objetivo inicial é analisar estes arquivos criando uma base de dados relacional para fazer a carga e depois analisá-la. O cartão fraudado, será aquele que tiver movimentações abaixo de 2 minutos de espaçamento entre as transações.
 
