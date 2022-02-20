@@ -1,13 +1,6 @@
 import pyodbc 
 import pandas as pd
 
-#Conectar ao SQL
-connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=.\SQLEXPRESS;DATABASE=mov_bancarias;Trusted_Connection=yes;')
-
-cursor=connection.cursor()
-
-
-
 
 # #Importar
 # data = pd.read_csv (r"C:/Users/f_sca/Desktop/python_desafio/arquivos_csv/clients-001.csv")   
@@ -41,8 +34,11 @@ cursor=connection.cursor()
 # connection.commit()
 
 
-def connectToMySQL():
+#Conectar ao SQL    
+def connectToSQLServer():
     connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=.\SQLEXPRESS;DATABASE=mov_bancarias;Trusted_Connection=yes;')
     cursor=connection.cursor()
     return cursor
+
+  
 

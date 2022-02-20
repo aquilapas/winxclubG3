@@ -7,15 +7,6 @@ import pymysql.cursors
 
 # print(df)
 
-import pymysql.cursors
-
-# Connect to the database
-connection = pymysql.connect(server='.\SQLEXPRESS',
-                             user='',
-                             password='',
-                             database='banco_teste',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
 
 # with connection:
 #     with connection.cursor() as cursor:
@@ -66,3 +57,24 @@ connection = pymysql.connect(server='.\SQLEXPRESS',
 #                 row.price
 #                 ''')
 # conn.commit()
+
+
+# #insiro dados no banco
+# cursor.execute("insert into importacao(texto) values ('teste python')")
+# connection.commit()
+
+# # # busco dados no banco
+# # dados=cursor.execute("SELECT * FROM importacao")
+
+
+# # while 1:
+# #     row = cursor.fetchone()
+# #     if not row:
+# #         break
+
+# #     print("----------")
+# #     print(f"texto: {row.texto}")
+
+    
+# cursor.close()
+# connection.close()
