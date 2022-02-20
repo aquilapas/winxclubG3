@@ -2,16 +2,11 @@ from os.path import exists
 import sys
 import time
 import pandas as pd
-#from ..db_connection.sql_server_connect.handlerDatabase import *
-
-
 
 #treat numbers to match with file description
 def treatNum(num, size=3):
     num = str(num)
     return num.zfill(size)
-
-
 
 #read files from data directory
 def preparaDados(id, file, fields):
@@ -54,7 +49,6 @@ def preparaDados(id, file, fields):
     if exists(filename): 
             preparaDados(id+1, file, fields)
     print(f"{file}.csv está pronto para carregamento na base de dados")
-
 
 # read data to load to database
 def carregarDados(id, file):
