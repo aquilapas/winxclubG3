@@ -1,5 +1,4 @@
 from os.path import exists
-import sys
 import time
 import pandas as pd
 
@@ -12,7 +11,7 @@ def treatNum(num, size=3):
 def preparaDados(id, file, fields):
     print(f"VERIFICAÇÃO E TRATAMENTO DE DADOS EM {file}.csv")
     fields = fields.replace(";", ",")    
-    idx=treatNum(id)       
+    idx=treatNum(id)        
     filename = file+idx+".csv"
     try: 
         file1 = open(filename, 'r+', encoding='utf8')
@@ -27,7 +26,7 @@ def preparaDados(id, file, fields):
 
             if not line:
                 file1.close()
-                file1 = open(filename, "w", encoding='utf8')
+                file1 = open(filename, "w", encoding='utf8') #
                 file1.write(new_file_content)
                 break    
 
@@ -41,7 +40,7 @@ def preparaDados(id, file, fields):
         file1.close()
     except:
         print(f"Erro ao tentar carregar dados de {filename} ")
-        print("Continuando execução....\n\n")
+        print("Continuando execução...\n\n")
         time.sleep(0)
 
     idx=treatNum(id+1)
@@ -50,7 +49,7 @@ def preparaDados(id, file, fields):
             preparaDados(id+1, file, fields)
     print(f"{file}.csv está pronto para carregamento na base de dados")
 
-# read data to load to database
+# read data to load to database 
 def carregarDados(id, file):
     print(f"Carregando dados de {file}.csv")  
     idx=treatNum(id)       
@@ -66,7 +65,7 @@ def carregarDados(id, file):
             if not line:
                 break   
 
-            print("Line {}: {}\n".format(count,line.strip())) 
+            print(f"Line {count}: {line.strip()}\n") 
         file1.close()
     except:
         print(f"Erro ao tentar carregar dados de {filename} ")
