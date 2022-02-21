@@ -1,13 +1,12 @@
 import os
 import pyodbc
 import pandas as pd
-import time
 
 '''exemplo de como importar funções de outro arquivo (modularização do programa)'''
-from fileTreatement.csvReader import preparaDados, carregarDados
+from fileTreatement.csvReader import preparaDados
 
 
-'''Treat data''' ##trocar o que era ; por , (função que salva e cria um novo arquivo)
+'''Treat data'''
 preparaDados(1, 'data/clients-', 'id,nome,email,data_cadastro,telefone')
 preparaDados(1,'data/transaction-in-' , 'id,cliente_id,valor,data')
 preparaDados(1, 'data/transaction-out-', 'id,cliente_id,valor,data')
@@ -15,7 +14,7 @@ preparaDados(1, 'data/transaction-out-', 'id,cliente_id,valor,data')
 
 '''Connect to database'''
 try:
-    connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=.\SQLEXPRESS;DATABASE=banco_teste;Trusted_Connection=yes;')
+    connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=.\SQLEXPRESS;DATABASE=mov_bancarias;Trusted_Connection=yes;')
     cursor=connection.cursor()
 except:
     print(f"Houve um erro durante tentativa de conexão com base de dados SQL Server.")
@@ -23,12 +22,11 @@ except:
 
 '''Create Tables'''
 print('Criando as tabelas para recebimento de dados')
-time.sleep(1)
 
 '''TABELA CLIENTES'''
-if cursor.tables(table='clients', tableType='TABLE').fetchone(): #recupera linhas de uma tabela de banco de dados
+if cursor.tables(table='clients', tableType='TABLE').fetchone():
     print("TABELA CLIENTE JÁ EXISTE - IGNORANDO CRIAÇÃO")
-    time.sleep(1)
+
 else:
     print("CRIANDO TABELA CLIENTS")
     cursor.execute('''
@@ -72,9 +70,8 @@ connection.commit()
 
 
 '''Send data to tables'''
-# carregarDados(1, 'data/transaction-out-')
-file_list=os.listdir(r'data')
 
+file_list=os.listdir(r'data')
 '''Send data to clients'''
 print("Inserindo dados de:")
 for item in file_list:
@@ -83,9 +80,9 @@ for item in file_list:
         print(get_fileName)        
         data = pd.read_csv(get_fileName)   
         df = pd.DataFrame(data)
-        df = df.astype({'data_cadastro':'datetime64[ns]'}) ##transforma o tipo da tabela de string para datetime
+        df = df.astype({'data_cadastro':'datetime64[ns]'})
         print(df)
-        time.sleep(2)
+
         for row in df.itertuples(): 
 
             try:
@@ -104,7 +101,7 @@ for item in file_list:
                     cursor.execute(is_Field_exists_query)
                     results = cursor.fetchone()
                     connection.commit()
-                    # time.sleep(0.05)
+
                     if len(results) >=1:
                         print(f'Conflito com id já existente. Ignorando inserção de dados em {row.id}')
                     else:
@@ -116,13 +113,12 @@ for item in file_list:
 for item_transaction_in in file_list:
     if 'in' in item_transaction_in:
         get_fileName = "data/" + item_transaction_in
-        print(get_fileName)
-        time.sleep(2)        
+        print(get_fileName)       
         data = pd.read_csv(get_fileName)   
         df = pd.DataFrame(data)
-        df = df.astype({'data':'datetime64[ns]'}) ##transforma o tipo da tabela de string para datetime
+        df = df.astype({'data':'datetime64[ns]'}) 
         print(df)
-        time.sleep(0.02)
+        
         for row in df.itertuples(): 
 
             try:
@@ -140,7 +136,7 @@ for item_transaction_in in file_list:
                     cursor.execute(is_Field_exists_query)
                     results = cursor.fetchone()
                     connection.commit()
-                    # time.sleep(0.05)
+
                     if len(results) >=1:
                         print(f'Conflito com id já existente. Ignorando inserção de dados em {row.id}')
                     else:
@@ -155,9 +151,9 @@ for item_transaction_out in file_list:
         print(get_fileName)        
         data = pd.read_csv(get_fileName)   
         df = pd.DataFrame(data)
-        df = df.astype({'data':'datetime64[ns]'}) ##transforma o tipo da tabela de string para datetime
+        df = df.astype({'data':'datetime64[ns]'})
         print(df)
-        time.sleep(2)
+
         for row in df.itertuples(): 
 
             try:

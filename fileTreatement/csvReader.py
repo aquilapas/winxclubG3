@@ -1,5 +1,4 @@
 from os.path import exists
-import time
 import pandas as pd
 
 #treat numbers to match with file description
@@ -17,9 +16,8 @@ def preparaDados(id, file, fields):
         file1 = open(filename, 'r+', encoding='utf8')
         print(f"======= lendo arquivo {filename} =========")
         
-        time.sleep(1)
         count = 0
-        new_file_content = ""
+        new_file_content = "" 
         while True:
             count += 1
             line = file1.readline()
@@ -35,13 +33,11 @@ def preparaDados(id, file, fields):
                 new_line = fields                
             else:
                 new_line = new_line.replace(";", ",")
-            new_file_content += new_line +"\n"
-                #print("Line {}: {}\n".format(count,line.strip())) 
+            new_file_content += new_line +"\n" 
         file1.close()
     except:
         print(f"Erro ao tentar carregar dados de {filename} ")
         print("Continuando execução...\n\n")
-        time.sleep(0)
 
     idx=treatNum(id+1)
     filename = file+idx+".csv"
@@ -49,30 +45,39 @@ def preparaDados(id, file, fields):
             preparaDados(id+1, file, fields)
     print(f"{file}.csv está pronto para carregamento na base de dados")
 
-# read data to load to database 
-def carregarDados(id, file):
-    print(f"Carregando dados de {file}.csv")  
-    idx=treatNum(id)       
-    filename = file+idx+".csv"
-    try: 
-        file1 = open(filename, 'r', encoding='utf8')
-        print(f"======= lendo arquivo {filename} =========")        
-        time.sleep(1)
-        count = 0
-        while True:
-            count += 1
-            line = file1.readline()
-            if not line:
-                break   
 
-            print(f"Line {count}: {line.strip()}\n") 
-        file1.close()
-    except:
-        print(f"Erro ao tentar carregar dados de {filename} ")
-        print("Continuando execução....\n\n")
-        time.sleep(0)
 
-    idx=treatNum(id+1)
-    filename = file+idx+".csv"
-    if exists(filename): 
-            carregarDados(id+1, file)    
+
+
+
+
+
+
+
+# # read data to load to database 
+# def carregarDados(id, file):
+#     print(f"Carregando dados de {file}.csv")  
+#     idx=treatNum(id)       
+#     filename = file+idx+".csv"
+#     try: 
+#         file1 = open(filename, 'r', encoding='utf8')
+#         print(f"======= lendo arquivo {filename} =========")        
+#         time.sleep(1)
+#         count = 0
+#         while True:
+#             count += 1
+#             line = file1.readline()
+#             if not line:
+#                 break   
+
+#             print(f"Line {count}: {line.strip()}\n") 
+#         file1.close()
+#     except:
+#         print(f"Erro ao tentar carregar dados de {filename} ")
+#         print("Continuando execução....\n\n")
+#         time.sleep(0)
+
+#     idx=treatNum(id+1)
+#     filename = file+idx+".csv"
+#     if exists(filename): 
+#             carregarDados(id+1, file)
