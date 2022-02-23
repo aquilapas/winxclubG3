@@ -17,7 +17,7 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 
 ● **Nathalia Madia**
 
-● **Paula Correa Carrinho **
+● **Paula Correa Carrinho**
 
 ## Orientador
 
