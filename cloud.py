@@ -12,9 +12,9 @@ preparaDados(1,'data/transaction-in-' , 'id,cliente_id,valor,data')
 preparaDados(1, 'data/transaction-out-', 'id,cliente_id,valor,data')
 
 
-'''Connect to database'''
+'''Connect to database SQL AZURE'''
 try:
-    connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=.\SQLEXPRESS;DATABASE=mov_bancarias;Trusted_Connection=yes;')
+    connection = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=tcp:servidorsqldesafio.database.windows.net,1433;Database=mov_bancarias;Uid=flaviascarlate;Pwd=12345Ab!;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=3000;')
     cursor=connection.cursor()
 
     '''Create Tables'''
@@ -113,7 +113,7 @@ try:
             print(get_fileName)       
             data = pd.read_csv(get_fileName)   
             df = pd.DataFrame(data)
-            df = df.astype({'data':'datetime64[ns]'}) 
+            df = df.astype({'data':'datetime64[ns]'})
             print(df)
             
             for row in df.itertuples(): 
@@ -133,7 +133,6 @@ try:
                         cursor.execute(is_Field_exists_query)
                         results = cursor.fetchone()
                         connection.commit()
-
                         if len(results) >=1:
                             print(f'Conflito com id já existente. Ignorando inserção de dados em {row.id}')
                         else:
@@ -148,7 +147,7 @@ try:
             print(get_fileName)        
             data = pd.read_csv(get_fileName)   
             df = pd.DataFrame(data)
-            df = df.astype({'data':'datetime64[ns]'})
+            df = df.astype({'data':'datetime64[ns]'}) 
             print(df)
 
             for row in df.itertuples(): 
@@ -168,7 +167,6 @@ try:
                         cursor.execute(is_Field_exists_query)
                         results = cursor.fetchone()
                         connection.commit()
-                        #time.sleep(0.05)
                         if len(results) >=1:
                             print(f'Conflito com id já existente. Ignorando inserção de dados em {row.id}')
                         else:
