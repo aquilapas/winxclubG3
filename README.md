@@ -2,8 +2,14 @@
 
 Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022 😃
 
+## SUMÁRIO
+
+- [Participantes do Grupo 3](#participantes)
+- [Objeitivos](#objetivos)
+- [DICAS DE HACKER](#dicas)
+
 ---
-## Participantes do Grupo 3
+## Participantes do Grupo 3 (#participantes)
 
 ● **Ana Carolina Oliveira**
 
@@ -28,11 +34,11 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 ● Carina Aguiar
 
 ---
-## 🎯 Objetivo
+## 🎯 Objetivo (#objetivos)
 Desenvolver uma aplicação em Python para carga de arquivos em um banco de dados SQL e gerar relatórios estatísticos visando a descoberta de fraudes em cartão de crédito.
 
 ---
-## 💡 DICAS DE HACKER
+## 💡 DICAS DE HACKER (#dicas)
 Pronto! Você recebeu um arquivo zip com vários arquivos mostrando possíveis movimentações bancárias:
 
 ● transaction-in-001.csv, transaction-in-002.csv …
