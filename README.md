@@ -1,3 +1,6 @@
+
+![Winx club](grupo.jpeg)
+
 # Desafio Final - Academia Data Azure - Accenture
 
 Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022 😃
@@ -6,7 +9,10 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 
 - [Participantes do Grupo 3](#participantes)
 - [Objeitivos](#objetivos)
-- [DICAS DE HACKER]
+- [DICAS DE HACKER](#dicas)
+- [ENTREGAS MÍNIMAS](#entregras mínimas)
+- [CRITÉRIOS DE AVALIAÇÃO](#criterios de avaliação)
+- [TRELLO](#trello)
 
 ---
 ## Participantes do Grupo 3 (#participantes)
@@ -53,7 +59,7 @@ Pronto! Você recebeu um arquivo zip com vários arquivos mostrando possíveis m
 Seu objetivo inicial é analisar estes arquivos criando uma base de dados relacional para fazer a carga e depois analisá-la. O cartão fraudado, será aquele que tiver movimentações abaixo de 2 minutos de espaçamento entre as transações.
 
 ---
-## 📝ENTREGAS MÍNIMAS
+## 📝ENTREGAS MÍNIMAS (#entregras mínimas)
 
 1. Script de migração em Python
 2. Modelo de Entidades e Relacionamentos
@@ -61,7 +67,7 @@ Seu objetivo inicial é analisar estes arquivos criando uma base de dados relaci
 4. Códigos versionados no github.com
 
 ---
-## ✔️ CRITÉRIOS DE AVALIAÇÃO
+## ✔️ CRITÉRIOS DE AVALIAÇÃO (#criterios de avaliação)
 
 1. Semântica do código
 2. Lógica desenvolvida
@@ -72,5 +78,5 @@ Seu objetivo inicial é analisar estes arquivos criando uma base de dados relaci
 7. Objetivo alcançado com os relatórios apresentados no PowerBI
 
 ---
-## 📌 TRELLO
+## 📌 TRELLO(#trello)
 https://trello.com/b/1JIIKXnd/accenture-desafio
