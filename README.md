@@ -5,19 +5,19 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 ---
 ## Participantes do Grupo 3
 
-● **Ana Carolina Oliveira**
+● **Ana Carolina Oliveira de Paula**
 
 ● **Áquila Porfirio Almeida Santos**
 
-● **Carolina Gabrielle Vieira**
+● **Carolina Gabrielle Castro Vieira**
 
 ● **Flávia Scarlate**
 
-● **Karoline Costa da Silva**
+● **Karoline Juliana Costa da Silva**
 
 ● **Nathalia Madia**
 
-● **Paula Correa**
+● **Paula Correa Carrinho**
 
 ## Orientador
 
