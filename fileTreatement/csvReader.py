@@ -29,8 +29,12 @@ def preparaDados(id, file, fields):
                 break    
 
             new_line = line.strip()
-            if (count == 1):
-                new_line = fields                
+            new_line = new_line.replace(";",",")
+            if ( count == 1):
+                if (new_line.replace(";",",") == fields):
+                    new_line = fields
+                else:
+                    new_line = fields+"\n"+new_line
             else:
                 new_line = new_line.replace(";", ",")
             new_file_content += new_line +"\n" 
