@@ -10,8 +10,8 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 - [Participantes do Grupo 3](#participantes)
 - [Objeitivos](#objetivos)
 - [DICAS DE HACKER](#dicas)
-- [ENTREGAS MÍNIMAS](#entregras minimas)
-- [CRITÉRIOS DE AVALIAÇÃO](#criterios de avaliacao)
+- [ENTREGAS MÍNIMAS](#entregras)
+- [CRITÉRIOS DE AVALIAÇÃO](#criterios)
 - [TRELLO](#trello)
 - [MODELO DE ENTIDADE E RELACIONAMENTO](#mer)
 
@@ -60,7 +60,7 @@ Pronto! Você recebeu um arquivo zip com vários arquivos mostrando possíveis m
 Seu objetivo inicial é analisar estes arquivos criando uma base de dados relacional para fazer a carga e depois analisá-la. O cartão fraudado, será aquele que tiver movimentações abaixo de 2 minutos de espaçamento entre as transações.
 
 ---
-## 📝ENTREGAS MÍNIMAS (#entregras minimas)
+## 📝ENTREGAS MÍNIMAS (#entregras)
 
 1. Script de migração em Python
 2. Modelo de Entidades e Relacionamentos
@@ -68,7 +68,7 @@ Seu objetivo inicial é analisar estes arquivos criando uma base de dados relaci
 4. Códigos versionados no github.com
 
 ---
-## ✔️ CRITÉRIOS DE AVALIAÇÃO (#criterios de avaliacao)
+## ✔️ CRITÉRIOS DE AVALIAÇÃO (#criterios)
 
 1. Semântica do código
 2. Lógica desenvolvida
