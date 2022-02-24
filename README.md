@@ -1,6 +1,6 @@
 # Desafio Final - Academia Data Azure - Accenture
 
-Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022.😃
+Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022 😃
 
 ---
 ## Participantes do Grupo 3
