@@ -22,7 +22,7 @@ cursor.execute('''
 			id int primary key,
 			nome varchar(200),
             email varchar(200),
-            data_cadastro varchar(200),
+            data_cadastro datetime,
 			telefone varchar(100)
 			)
             ''')
@@ -32,7 +32,7 @@ cursor.execute('''
 			id int primary key,
 			cliente_id int,
             valor float,
-            data varchar(200),
+            data datetime,
 			)
             ''')
 
@@ -41,9 +41,14 @@ cursor.execute('''
 			id int primary key,
 			cliente_id int,
             valor float,
-            data varchar(200),
+            data datetime,
 			)
             ''')
+
+def converter_data(data):#converte a data para ser aceita como datetime no sql (desconsiderando o -03:00 do fuso horário)
+    data1 = data[:10]
+    data2 = data[11:19]
+    return data1+'T'+data2
 
 # insiro dados no banco
 for index, row in clientes.iterrows():
@@ -54,7 +59,7 @@ for index, row in clientes.iterrows():
     row.id,
     row.nome,
     row.email,
-    row.data_cadastro,
+    converter_data(row.data_cadastro),
     row.telefone)
 
 for index, row in transaction_in.iterrows():
@@ -64,7 +69,7 @@ for index, row in transaction_in.iterrows():
     row.id,
     row.cliente_id,
     row.valor,
-    row.data)
+    converter_data(row.data))
 
 for index, row in transaction_out.iterrows():
     cursor.execute('''
@@ -73,7 +78,7 @@ for index, row in transaction_out.iterrows():
     row.id,
     row.cliente_id,
     row.valor,
-    row.data)
+    converter_data(row.data))
 
 connection.commit()
 
