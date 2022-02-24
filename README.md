@@ -1,23 +1,23 @@
 # Desafio Final - Academia Data Azure - Accenture
 
-Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022.😃
+Este repositório faz parte do curso ofertado pela **Gama Academy**, proporcionado pela **Accenture**, realizado no período de janeiro a março do ano de 2022 😃
 
 ---
 ## Participantes do Grupo 3
 
-● **Ana Carolina Oliveira de Paula**
+● **Ana Carolina Oliveira**
 
 ● **Áquila Porfirio Almeida Santos**
 
-● **Carolina Gabrielle Castro Vieira**
+● **Carolina Gabrielle Vieira**
 
 ● **Flávia Scarlate**
 
-● **Karoline Juliana Costa da Silva**
+● **Karoline Costa da Silva**
 
 ● **Nathalia Madia**
 
-● **Paula Correa Carrinho**
+● **Paula Correa**
 
 ## Orientador
 

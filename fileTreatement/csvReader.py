@@ -1,4 +1,5 @@
 from os.path import exists
+import pandas as pd
 
 #treat numbers to match with file description
 def treatNum(num, size=3):
