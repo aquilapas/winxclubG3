@@ -6,7 +6,7 @@ Este repositório faz parte do curso ofertado pela **Gama Academy**, proporciona
 
 - [Participantes do Grupo 3](#participantes)
 - [Objeitivos](#objetivos)
-- [DICAS DE HACKER](#dicas)
+- [DICAS DE HACKER]
 
 ---
 ## Participantes do Grupo 3 (#participantes)
